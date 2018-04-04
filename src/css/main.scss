@@ -1,0 +1,37 @@
+$main: #027bf4;
+$grey: #757575;
+$white: #ffffff;
+$black: #000000;
+
+$padding: 10px;
+$paddingText: 4px;
+$margin: 10px;
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Verdana';
+  clear: left;
+  text-align: center;
+}
+
+header, footer {
+  width: 100%;
+  padding: $padding;
+  color: $white;
+  background-color: $main;
+}
+
+.body {
+  font-size: 80%;
+  padding: $padding;
+  color: $black;
+  background-color: $white;
+}
+
+input {
+  color: $black;
+  background-color: $white;
+  padding: $paddingText;
+  font-size: 100%;
+}

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { font: 13px Helvetica, Arial; }
+      form {
+        padding: 3px;
+        position:
+        relative;
+        bottom: 0;
+
+        display: inline-block;
+      }
+      form input { border: 0; padding: 10px; width: 78%; margin-right: .5%; }
+      form button {
+        color: #ffffff;
+        background: #007acc;
+        border: none; padding: 10px;
+        display: inline-block;
+      }
+      form button:hover {
+        background: #005c99;
+        border: none; padding: 10px;
+        display: inline-block;
+      }
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages li { padding: 5px 10px; }
+      #messages li:nth-child(odd) { background: #eee; }
+      #messages { margin-bottom: 40px }
+      .tableWrapper { width: 45%; display: inline-block;}
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Select market</h1>
+      <form>
+        <select id="mySelect">
+          <option>BTC-ETH</option>
+          <option>BTC-DASH</option>
+          <option>BTC-OMG</option>
+          <option>BTC-IGNIS</option>
+        </select>
+      </form>
+      <form id='getOrders' action="">
+        <button>Refresh</button>
+      </form>
+      <form id='cancelOrders' action="">
+        <button>Cancel all orders</button>
+      </form>
+      <form id='placeOrders' action="">
+        <button>Place orders</button>
+      </form>
+    </section>
+    <section>
+      <h1>Market status</h1>
+      <p><strong>Ticker </strong><span id="ticker"></span></p>
+      <p><strong>Balance </strong><span id="balance"></span></p>
+      <h3>Open orders</h3>
+      <ul id="openOrders"></ul>
+    </section>
+    <section>
+      <div class='tableWrapper'>
+        <h3>BUYS</h3>
+        <ul id="openBuys"></ul>
+      </div>
+      <div class='tableWrapper'>
+        <h3>SELLS</h3>
+        <ul id="openSells"></ul>
+      </div>
+    </section>
+
+    <section>
+      <h1>Log</h1>
+      <ul id="messages"></ul>
+    </section>
+
+
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>

@@ -3,10 +3,18 @@
   "version": "0.0.1",
   "description": "my first socket.io app",
   "dependencies": {
+    "bittrex-wrapper": "^1.0.5",
+    "csvtojson": "^1.1.9",
+    "dataframe": "^2.0.1",
+    "dataframe-js": "^1.2.7",
     "express": "^4.15.2",
+    "nedb": "^1.8.0",
+    "papaparse": "^4.3.7",
     "socket.io": "^1.7.3"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "nodemon index.js",
+    "front:start": "webpack-dev-server --open --config webpack.dev.js --port 9000 --host 0.0.0.0",
+    "front:build": "webpack --config webpack.prod.js"
   }
 }
